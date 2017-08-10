@@ -10,6 +10,8 @@ import org.csource.fastdfs.TrackerClient;
 import org.csource.fastdfs.TrackerServer;
 import org.junit.Test;
 
+import cn.e3mall.common.utils.FastDFSClient;
+
 public class FastDFSTest {
 	
 	@Test
@@ -29,5 +31,14 @@ public class FastDFSTest {
 		for (String string : strings) {
 			System.out.println(string);
 		}
+	}
+	
+	@Test
+	public void testFastClientDFS() throws Exception{
+		//创建一个FastDFSClient对象
+		FastDFSClient fastDFSClient = new FastDFSClient("E:/workspace-javaee/e3-manager-web/src/main/resources/conf/client.properties");
+		//使用对象上传对象，获得文件的路径
+		String string = fastDFSClient.uploadFile("C:/Users/pc/Desktop/bdabad3d1112368409c54e8153dbeeba.jpg");
+		System.out.println(string);
 	}
 }
