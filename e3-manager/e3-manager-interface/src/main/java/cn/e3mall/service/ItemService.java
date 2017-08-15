@@ -12,4 +12,5 @@ public interface ItemService {
 	public E3Result editItem(long id);
 	public E3Result deleteItem(long id);
 	public E3Result instockItem(long id);
+	TbItemDesc getTbItemDescById(long itemId);
 }
